@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>মুন্তাসির আহমদ | ই-কমার্স গ্রোথ ও ডিজিটাল মার্কেটিং বিশেষজ্ঞ</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0B0F19',
+                            card: '#131D31',
+                            blue: '#2563EB',
+                            indigo: '#4F46E5',
+                            accent: '#38BDF8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-effect {
+            background: rgba(19, 29, 49, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #38BDF8 0%, #3B82F6 50%, #818CF8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-slate-100 antialiased selection:bg-blue-600 selection:text-white">
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-emerald-600 text-white px-6 py-3 rounded-xl shadow-2xl flex items-center gap-3">
+        <i class="fa-solid fa-circle-check text-xl"></i>
+        <span id="toast-message">সফলভাবে সাবমিট হয়েছে!</span>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-40 glass-effect border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center font-bold text-xl text-white shadow-lg shadow-blue-500/30">
+                    M
+                </div>
+                <div>
+                    <span class="text-xl font-bold tracking-tight block">মুন্তাসির আহমদ</span>
+                    <span class="text-xs text-blue-400 font-medium">ডিজিটাল গ্রোথ এক্সপার্ট</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-blue-400 transition-colors">আমার সম্পর্কে</a>
+                <a href="#services" class="hover:text-blue-400 transition-colors">সার্ভিসসমূহ</a>
+                <a href="#why-us" class="hover:text-blue-400 transition-colors">কেন আমাকে বেছে নেবেন</a>
+                <a href="#process" class="hover:text-blue-400 transition-colors">কর্মপদ্ধতি</a>
+                <a href="#portfolio" class="hover:text-blue-400 transition-colors">পোর্টফোলিও</a>
+                <a href="#faq" class="hover:text-blue-400 transition-colors">প্রশ্নোত্তর</a>
+            </nav>
+
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="tel:01896182507" class="flex items-center gap-2 text-sm font-semibold text-slate-300 hover:text-blue-400 transition-colors">
+                    <i class="fa-solid fa-phone text-blue-500"></i> 01896182507
+                </a>
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-xl font-semibold text-sm transition-all shadow-lg shadow-blue-600/30 hover:scale-105">
+                    ফ্রি কনসালটেশন
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="lg:hidden text-2xl text-slate-300 hover:text-white focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden glass-effect border-b border-slate-800 px-6 py-5 space-y-4">
+            <a href="#about" class="block text-slate-300 hover:text-blue-400 font-medium">আমার সম্পর্কে</a>
+            <a href="#services" class="block text-slate-300 hover:text-blue-400 font-medium">সার্ভিসসমূহ</a>
+            <a href="#why-us" class="block text-slate-300 hover:text-blue-400 font-medium">কেন আমাকে বেছে নেবেন</a>
+            <a href="#process" class="block text-slate-300 hover:text-blue-400 font-medium">কর্মপদ্ধতি</a>
+            <a href="#portfolio" class="block text-slate-300 hover:text-blue-400 font-medium">পোর্টফোলিও</a>
+            <a href="#faq" class="block text-slate-300 hover:text-blue-400 font-medium">প্রশ্নোত্তর</a>
+            <div class="pt-4 border-t border-slate-800 flex flex-col gap-3">
+                <a href="tel:01896182507" class="flex items-center gap-2 text-sm font-semibold text-slate-300">
+                    <i class="fa-solid fa-phone text-blue-500"></i> 01896182507
+                </a>
+                <a href="#contact" class="bg-blue-600 text-center text-white py-2.5 rounded-xl font-semibold text-sm">
+                    ফ্রি কনসালটেশন
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+        <!-- Background Gradient Glows -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/20 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="absolute top-1/3 right-10 w-[300px] h-[300px] bg-indigo-600/15 blur-[100px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs md:text-sm font-semibold">
+                        <i class="fa-solid fa-chart-line"></i> ই-কমার্স গ্রোথ স্পেশালিস্ট - মৌলভীবাজার, বাংলাদেশ
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        আপনার ই-কমার্স বিজনেসের জন্য <span class="gradient-text">ডাটা-ড্রাইভেন ডিজিটাল মার্কেটিং</span> সলিউশন
+                    </h1>
+                    <p class="text-slate-300 text-base md:text-lg max-w-2xl mx-auto lg:mx-0">
+                        বিজ্ঞাপনের বাজেট নষ্ট না করে সঠিক স্ট্র্যাটেজি, মেটা পিক্সেল ও এআই অটোমেশনের মাধ্যমে আপনার অনলাইন স্টোরের সেলস এবং আরওআই (ROI) নিশ্চিত করুন।
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#contact" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-4 rounded-xl shadow-xl shadow-blue-600/30 transition-all hover:scale-105 text-center">
+                            ফ্রি কনসালটেশন নিন <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="https://wa.me/8801896182507?text=হ্যালো%20মুন্তাসির%20ভাই,%20আমার%20ই-কমার্স%20বিজনেস%20নিয়ে%20কথা বলতে%20চাই।" target="_blank" class="w-full sm:w-auto bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold px-8 py-4 rounded-xl border border-slate-700 transition-all text-center flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-xl"></i> হোয়াটসঅ্যাপে কথা বলুন
+                        </a>
+                    </div>
+                    <!-- Trust Indicators -->
+                    <div class="pt-8 border-t border-slate-800/80 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-slate-400 text-sm">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-shield-check text-blue-500 text-lg"></i> ১০০% রেজাল্ট ওরিয়েন্টেড
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-bullseye text-blue-500 text-lg"></i> টার্গেটেড অডিয়েন্স টার্গেটিং
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-chart-pie text-blue-500 text-lg"></i> অ্যাডভান্সড অ্যানালিটিক্স
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Graphic / Card -->
+                <div class="lg:col-span-5">
+                    <div class="glass-effect rounded-3xl p-6 md:p-8 relative shadow-2xl border border-slate-700/50">
+                        <div class="absolute -top-4 -right-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg">
+                            প্রোফেশনাল গ্রোথ পার্টনার
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-14 h-14 rounded-2xl bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-blue-400 text-2xl font-bold">
+                                    <i class="fa-solid fa-store"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg text-white">ই-কমার্স ব্র্যান্ড স্কেলিং</h3>
+                                    <p class="text-sm text-slate-400">আপনার সেলস দ্বিগুণ করার সঠিক রূপরেখা</p>
+                                </div>
+                            </div>
+                            <div class="space-y-3 pt-2">
+                                <div class="bg-slate-900/60 p-4 rounded-2xl border border-slate-800 flex items-center justify-between">
+                                    <span class="text-sm font-medium text-slate-300">মেটা পিক্সেল ও সিএপিআই সেটআপ</span>
+                                    <span class="text-xs font-semibold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-lg">শতভাগ সঠিক ডাটা</span>
+                                </div>
+                                <div class="bg-slate-900/60 p-4 rounded-2xl border border-slate-800 flex items-center justify-between">
+                                    <span class="text-sm font-medium text-slate-300">ফেসবুক ও ইনস্টাগ্রাম অ্যাডস</span>
+                                    <span class="text-xs font-semibold text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded-lg">উচ্চ আরওআই (ROI)</span>
+                                </div>
+                                <div class="bg-slate-900/60 p-4 rounded-2xl border border-slate-800 flex items-center justify-between">
+                                    <span class="text-sm font-medium text-slate-300">এআই মার্কেটিং অটোমেশন</span>
+                                    <span class="text-xs font-semibold text-indigo-400 bg-indigo-500/10 px-2.5 py-1 rounded-lg">স্মার্ট কনভার্শন</span>
+                                </div>
+                            </div>
+                            <div class="pt-2">
+                                <div class="bg-blue-600/10 border border-blue-500/20 rounded-2xl p-4 text-center">
+                                    <p class="text-xs text-blue-300 font-medium">সরাসরি কথা বলুন বিশেষজ্ঞের সাথে</p>
+                                    <a href="tel:01896182507" class="text-lg font-bold text-white hover:text-blue-400 transition-colors block mt-1">
+                                        <i class="fa-solid fa-phone-volume mr-2 text-blue-500"></i> 01896182507
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust / Statistics Section -->
+    <section class="py-12 border-y border-slate-800 bg-slate-900/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="space-y-1">
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-white gradient-text">৫+ বছর</h3>
+                    <p class="text-sm text-slate-400 font-medium">ডিজিটাল মার্কেটিং অভিজ্ঞতা</p>
+                </div>
+                <div class="space-y-1">
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-white gradient-text">৫০+</h3>
+                    <p class="text-sm text-slate-400 font-medium">সফল ই-কমার্স প্রজেক্ট</p>
+                </div>
+                <div class="space-y-1">
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-white gradient-text">৩x - ৫x</h3>
+                    <p class="text-sm text-slate-400 font-medium">গড় আরওআই (ROAS)</p>
+                </div>
+                <div class="space-y-1">
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-white gradient-text">১০০%</h3>
+                    <p class="text-sm text-slate-400 font-medium">ডাটা-ড্রাইভেন অ্যাপ্রোচ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem -> Solution Section -->
+    <section class="py-20 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-blue-400 text-sm font-bold uppercase tracking-wider">সমস্যা ও সমাধান</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold">আপনার ই-কমার্স বিজনেস কি কাঙ্ক্ষিত সেলস পাচ্ছে না?</h2>
+                <p class="text-slate-400">সঠিক স্ট্র্যাটেজি এবং প্রোপার ট্র্যাকিংয়ের অভাবে অনেক সম্ভাবনাময় ই-কমার্স ব্র্যান্ড পিছিয়ে পড়ে।</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Common Problems -->
+                <div class="glass-effect rounded-3xl p-8 border border-red-500/20 bg-gradient-to-b from-red-950/10 to-transparent">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-red-500/10 flex items-center justify-center text-red-400 font-bold">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-red-400">সাধারণ সমস্যাসমূহ</h3>
+                    </div>
+                    <ul class="space-y-4 text-slate-300">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-xmark text-red-500 mt-1"></i>
+                            <span>অ্যাড কস্ট বাড়ছে কিন্তু সেভাবে সেলস বা অর্ডার আসছে না।</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-xmark text-red-500 mt-1"></i>
+                            <span>সঠিক অডিয়েন্স টার্গেটিং না হওয়ায় বিজ্ঞাপনের বাজেট নষ্ট হচ্ছে।</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-xmark text-red-500 mt-1"></i>
+                            <span>আইওএস (iOS) প্রাইভেসি আপডেটের পর পিক্সেল সঠিক ডাটা ট্র্যাক করতে পারছে না।</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-xmark text-red-500 mt-1"></i>
+                            <span>ওয়েবসাইটে ভিজিটর আসলেও তারা অর্ডার না করে চলে যাচ্ছে (কনভার্শন কম)।</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Professional Solutions -->
+                <div class="glass-effect rounded-3xl p-8 border border-blue-500/20 bg-gradient-to-b from-blue-950/10 to-transparent">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 font-bold">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-400">আমার প্রদত্ত আধুনিক সমাধান</h3>
+                    </div>
+                    <ul class="space-y-4 text-slate-300">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-blue-500 mt-1"></i>
+                            <span>ডাটা-ড্রাইভেন ফানেল স্ট্র্যাটেজির মাধ্যমে অ্যাড স্পেন্ডের সঠিক রিটার্ন নিশ্চিত করা।</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-blue-500 mt-1"></i>
+                            <span>মেটা পিক্সেল ও কনভার্শন এপিআই (CAPI) সেটআপের মাধ্যমে ১০০% সঠিক ইভেন্ট ট্র্যাক করা।</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-blue-500 mt-1"></i>
+                            <span>রিমার্কেটিং ও কাস্টম অডিয়েন্সের মাধ্যমে পটেনশিয়াল ক্রেতাদের পুনরায় ফিরিয়ে আনা।</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-blue-500 mt-1"></i>
+                            <span>এআই মার্কেটিং অটোমেশন ও এসইও-র মাধ্যমে অর্গানিক ট্রাফিক ও লং-টার্ম গ্রোথ নিশ্চিত করা।</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-blue-400 text-sm font-bold uppercase tracking-wider">আমার সার্ভিসসমূহ</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold">ই-কমার্স গ্রোথ এক্সিলারেটর সার্ভিসেস</h2>
+                <p class="text-slate-400">যে সার্ভিসগুলো আপনার ই-কমার্স ব্যবসাকে একটি প্রফিটেবল ব্র্যান্ডে রূপান্তর করতে সাহায্য করবে।</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="glass-effect rounded-3xl p-8 hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-1.5 group">
+                    <div class="w-14 h-14 rounded-2xl bg-blue-600/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                        <i class="fa-brands fa-facebook"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Facebook & Instagram Ads</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        সঠিক কাস্টমার টার্গেটিং, আকর্ষণীয় ক্রিয়েটিভ এবং প্রপার বাজেট অপ্টিমাইজেশনের মাধ্যমে আপনার ই-কমার্স প্রোডাক্টের সেলস বহুগুণ বাড়িয়ে তুলুন।
+                    </p>
+                    <div class="text-xs font-semibold text-blue-400 bg-blue-500/10 px-3 py-1.5 rounded-lg in
